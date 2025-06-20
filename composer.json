@@ -1,0 +1,33 @@
+{
+    "name": "saurab/wp-vue-form",
+    "description": "Wordpress vue form plugin",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Saurab Gupta",
+            "email": "saurab1234gupt@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "WPVueForm\\": "./app"
+        },
+        "files": [
+            "utils/wpvueform-helper.php"
+        ]
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require": {
+        "illuminate/collections": "^10.48"
+    }
+}

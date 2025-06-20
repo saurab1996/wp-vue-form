@@ -1,0 +1,103 @@
+// index.ts
+
+declare module "presets/lara" {
+
+    interface Presets {
+        global: any;
+        directives: {
+            badge: any;
+            ripple: any;
+            tooltip: any;
+        };
+        autocomplete: any;
+        dropdown: any;
+        inputnumber: any;
+        inputtext: any;
+        calendar: any;
+        checkbox: any;
+        radiobutton: any;
+        inputswitch: any;
+        selectbutton: any;
+        slider: any;
+        chips: any;
+        rating: any;
+        multiselect: any;
+        togglebutton: any;
+        cascadeselect: any;
+        listbox: any;
+        colorpicker: any;
+        inputgroup: any;
+        inputgroupaddon: any;
+        inputmask: any;
+        knob: any;
+        treeselect: any;
+        tristatecheckbox: any;
+        textarea: any;
+        password: any;
+        iconfield: any;
+        floatlabel: any;
+        inputotp: any;
+        button: any;
+        splitbutton: any;
+        speeddial: any;
+        paginator: any;
+        datatable: any;
+        tree: any;
+        dataview: any;
+        dataviewlayoutoptions: any;
+        organizationchart: any;
+        orderlist: any;
+        picklist: any;
+        treetable: any;
+        timeline: any;
+        accordion: any;
+        panel: any;
+        fieldset: any;
+        card: any;
+        tabview: any;
+        divider: any;
+        toolbar: any;
+        scrollpanel: any;
+        splitter: any;
+        splitterpanel: any;
+        stepper: any;
+        deferred: any;
+        fileupload: any;
+        contextmenu: any;
+        menu: any;
+        menubar: any;
+        steps: any;
+        tieredmenu: any;
+        breadcrumb: any;
+        panelmenu: any;
+        megamenu: any;
+        dock: any;
+        tabmenu: any;
+        dialog: any;
+        overlaypanel: any;
+        sidebar: any;
+        confirmpopup: any;
+        message: any;
+        inlinemessage: any;
+        toast: any;
+        carousel: any;
+        galleria: any;
+        image: any;
+        badge: any;
+        avatar: any;
+        avatargroup: any;
+        tag: any;
+        chip: any;
+        progressbar: any;
+        skeleton: any;
+        scrolltop: any;
+        terminal: any;
+        blockui: any;
+        metergroup: any;
+        inplace: any;
+        progressspinner: any;
+    }
+
+    const Lara: Presets;
+    export default Lara;
+}

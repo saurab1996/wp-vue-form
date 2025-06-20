@@ -1,0 +1,38 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.exact-active{
+    @apply bg-primary-400 text-white  rounded-md;
+}
+
+html.dark body{
+    @apply bg-gray-600 text-white;
+}
+:focus-visible {
+    outline: unset !important;
+}
+
+div[data-pc-section="header"]{
+    @apply rounded-t-md;
+}
+
+nav[data-pc-section="paginatorwrapper"] div{
+    @apply rounded-b-md;
+}
+div[data-pc-name="card"]{
+    @apply !bg-gray-200 dark:!bg-surface-900;
+}
+
+div[data-pc-name="toolbar"]{
+    @apply p-4;
+}
+
+span[data-pc-name="tag"],
+button{
+    @apply dark:!text-white;
+}
+*:focus{
+   box-shadow: unset !important;
+}

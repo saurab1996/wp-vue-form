@@ -1,0 +1,38 @@
+{
+  "../node_modules/primeicons/fonts/primeicons.eot": {
+    "file": "css/primeicons.eot",
+    "src": "../node_modules/primeicons/fonts/primeicons.eot"
+  },
+  "../node_modules/primeicons/fonts/primeicons.svg": {
+    "file": "css/primeicons.svg",
+    "src": "../node_modules/primeicons/fonts/primeicons.svg"
+  },
+  "../node_modules/primeicons/fonts/primeicons.ttf": {
+    "file": "css/primeicons.ttf",
+    "src": "../node_modules/primeicons/fonts/primeicons.ttf"
+  },
+  "../node_modules/primeicons/fonts/primeicons.woff": {
+    "file": "css/primeicons.woff",
+    "src": "../node_modules/primeicons/fonts/primeicons.woff"
+  },
+  "../node_modules/primeicons/fonts/primeicons.woff2": {
+    "file": "css/primeicons.woff2",
+    "src": "../node_modules/primeicons/fonts/primeicons.woff2"
+  },
+  "index.html": {
+    "file": "js/index.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "css/index.css"
+    ],
+    "assets": [
+      "css/primeicons.eot",
+      "css/primeicons.woff2",
+      "css/primeicons.woff",
+      "css/primeicons.ttf",
+      "css/primeicons.svg"
+    ]
+  }
+}
