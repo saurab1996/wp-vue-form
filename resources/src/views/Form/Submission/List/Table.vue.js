@@ -1,4 +1,4 @@
-/* __placeholder__ */
+/// <reference types="../../../../../node_modules/.vue-global-types/vue_3.4_0_0_0.d.ts" />
 import { ref, onMounted, reactive } from 'vue';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
@@ -15,7 +15,6 @@ import { get } from "@/axios/index";
 import { FormColumnApiEndPoint, FormApiEndPoint } from '@/utils/const';
 import { updateFilterParams, getColumnFilterData } from '@/utils/table';
 import { useToastService, copyToClipboard } from '@/utils/helpers';
-const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const { showErrorMessage, showInternalServerErrorMessage } = useToastService();
 const loading = ref(true);
 const columnLoading = ref(true);
@@ -102,466 +101,434 @@ const clearFilter = () => {
 const globalFilter = () => {
     fetchFormList();
 };
-let __VLS_modelEmitsType;
-const __VLS_componentsOption = {};
-let __VLS_name;
-function __VLS_template() {
-    let __VLS_ctx;
-    /* Components */
-    let __VLS_otherComponents;
-    let __VLS_own;
-    let __VLS_localComponents;
-    let __VLS_components;
-    let __VLS_styleScopedClasses;
-    /* CSS variable injection */
-    /* CSS variable injection end */
-    let __VLS_resolvedLocalAndGlobalComponents;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_components.ActionMenu;
-    __VLS_components.ActionMenu;
-    __VLS_components.ActionMenu;
-    __VLS_components.ActionMenu;
+debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
+const __VLS_ctx = {};
+let __VLS_components;
+let __VLS_directives;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+/** @type {[typeof ActionMenu, typeof ActionMenu, ]} */ ;
+// @ts-ignore
+const __VLS_0 = __VLS_asFunctionalComponent(ActionMenu, new ActionMenu({
+    ref: "actionMenuRef",
+}));
+const __VLS_1 = __VLS_0({
+    ref: "actionMenuRef",
+}, ...__VLS_functionalComponentArgsRest(__VLS_0));
+/** @type {typeof __VLS_ctx.actionMenuRef} */ ;
+var __VLS_3 = {};
+var __VLS_2;
+const __VLS_5 = {}.DataTable;
+/** @type {[typeof __VLS_components.DataTable, typeof __VLS_components.DataTable, ]} */ ;
+// @ts-ignore
+const __VLS_6 = __VLS_asFunctionalComponent(__VLS_5, new __VLS_5({
+    ...{ 'onPage': {} },
+    ...{ 'onSort': {} },
+    ...{ 'onFilter': {} },
+    ...{ 'onSelectAllChange': {} },
+    ...{ 'onRowSelect': {} },
+    ...{ 'onRowUnselect': {} },
+    value: (__VLS_ctx.formData),
+    size: "small",
+    lazy: true,
+    paginator: true,
+    rows: (__VLS_ctx.rows),
+    first: (__VLS_ctx.first),
+    columnResizeMode: "fit",
+    filters: (__VLS_ctx.filters.data),
+    ref: "datatableRef",
+    dataKey: "id",
+    totalRecords: (__VLS_ctx.totalRecords),
+    loading: (__VLS_ctx.loading || __VLS_ctx.columnLoading),
+    filterDisplay: "menu",
+    rowHover: (false),
+    breakpoint: "780px",
+    stateStorage: "local",
+    stateKey: "dt-state-people-session",
+    globalFilterFields: (__VLS_ctx.filters.globalField),
+    selection: (__VLS_ctx.selectedCustomers),
+    selectAll: (__VLS_ctx.selectAll),
+    rowsPerPageOptions: ([10, 25, 50]),
+    resizableColumns: (true),
+    paginatorTemplate: "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport",
+    currentPageReportTemplate: "Showing {first} to {last} of {totalRecords}",
+}));
+const __VLS_7 = __VLS_6({
+    ...{ 'onPage': {} },
+    ...{ 'onSort': {} },
+    ...{ 'onFilter': {} },
+    ...{ 'onSelectAllChange': {} },
+    ...{ 'onRowSelect': {} },
+    ...{ 'onRowUnselect': {} },
+    value: (__VLS_ctx.formData),
+    size: "small",
+    lazy: true,
+    paginator: true,
+    rows: (__VLS_ctx.rows),
+    first: (__VLS_ctx.first),
+    columnResizeMode: "fit",
+    filters: (__VLS_ctx.filters.data),
+    ref: "datatableRef",
+    dataKey: "id",
+    totalRecords: (__VLS_ctx.totalRecords),
+    loading: (__VLS_ctx.loading || __VLS_ctx.columnLoading),
+    filterDisplay: "menu",
+    rowHover: (false),
+    breakpoint: "780px",
+    stateStorage: "local",
+    stateKey: "dt-state-people-session",
+    globalFilterFields: (__VLS_ctx.filters.globalField),
+    selection: (__VLS_ctx.selectedCustomers),
+    selectAll: (__VLS_ctx.selectAll),
+    rowsPerPageOptions: ([10, 25, 50]),
+    resizableColumns: (true),
+    paginatorTemplate: "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport",
+    currentPageReportTemplate: "Showing {first} to {last} of {totalRecords}",
+}, ...__VLS_functionalComponentArgsRest(__VLS_6));
+let __VLS_9;
+let __VLS_10;
+let __VLS_11;
+const __VLS_12 = {
+    onPage: (__VLS_ctx.updateTable)
+};
+const __VLS_13 = {
+    onSort: (__VLS_ctx.updateTable)
+};
+const __VLS_14 = {
+    onFilter: (__VLS_ctx.updateTable)
+};
+const __VLS_15 = {
+    onSelectAllChange: (__VLS_ctx.onSelectAllChange)
+};
+const __VLS_16 = {
+    onRowSelect: (__VLS_ctx.onRowSelect)
+};
+const __VLS_17 = {
+    onRowUnselect: (__VLS_ctx.onRowUnselect)
+};
+/** @type {typeof __VLS_ctx.datatableRef} */ ;
+var __VLS_18 = {};
+__VLS_8.slots.default;
+{
+    const { header: __VLS_thisSlot } = __VLS_8.slots;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+        ...{ class: "flex justify-between" },
+    });
+    const __VLS_20 = {}.Button;
+    /** @type {[typeof __VLS_components.Button, ]} */ ;
     // @ts-ignore
-    [ActionMenu, ActionMenu,];
-    __VLS_components.DataTable;
-    __VLS_components.DataTable;
-    __VLS_components.DataTable;
-    __VLS_components.DataTable;
+    const __VLS_21 = __VLS_asFunctionalComponent(__VLS_20, new __VLS_20({
+        ...{ 'onClick': {} },
+        type: "button",
+        icon: "pi pi-filter-slash",
+        label: "Clear",
+        outlined: true,
+        size: "small",
+    }));
+    const __VLS_22 = __VLS_21({
+        ...{ 'onClick': {} },
+        type: "button",
+        icon: "pi pi-filter-slash",
+        label: "Clear",
+        outlined: true,
+        size: "small",
+    }, ...__VLS_functionalComponentArgsRest(__VLS_21));
+    let __VLS_24;
+    let __VLS_25;
+    let __VLS_26;
+    const __VLS_27 = {
+        onClick: (__VLS_ctx.clearFilter)
+    };
+    var __VLS_23;
+    const __VLS_28 = {}.IconField;
+    /** @type {[typeof __VLS_components.IconField, typeof __VLS_components.IconField, ]} */ ;
     // @ts-ignore
-    [DataTable, DataTable,];
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_intrinsicElements.template;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
-    __VLS_components.Button;
+    const __VLS_29 = __VLS_asFunctionalComponent(__VLS_28, new __VLS_28({
+        iconPosition: "left",
+        ...{ class: "w-48 md:w-96" },
+    }));
+    const __VLS_30 = __VLS_29({
+        iconPosition: "left",
+        ...{ class: "w-48 md:w-96" },
+    }, ...__VLS_functionalComponentArgsRest(__VLS_29));
+    __VLS_31.slots.default;
+    const __VLS_32 = {}.InputIcon;
+    /** @type {[typeof __VLS_components.InputIcon, typeof __VLS_components.InputIcon, ]} */ ;
     // @ts-ignore
-    [Button, Button, Button, Button,];
-    __VLS_components.IconField;
-    __VLS_components.IconField;
-    __VLS_components.IconField;
-    __VLS_components.IconField;
-    // @ts-ignore
-    [IconField, IconField,];
-    __VLS_components.InputIcon;
-    __VLS_components.InputIcon;
-    __VLS_components.InputIcon;
-    __VLS_components.InputIcon;
-    // @ts-ignore
-    [InputIcon, InputIcon,];
-    __VLS_intrinsicElements.i;
-    __VLS_components.InputText;
-    __VLS_components.InputText;
-    __VLS_components.InputText;
-    __VLS_components.InputText;
-    // @ts-ignore
-    [InputText, InputText,];
-    __VLS_components.Loader;
-    __VLS_components.Loader;
-    __VLS_components.Loader;
-    __VLS_components.Loader;
-    // @ts-ignore
-    [Loader, Loader,];
-    __VLS_intrinsicElements.p;
-    __VLS_intrinsicElements.p;
-    __VLS_components.RouterLink;
-    __VLS_components.RouterLink;
-    __VLS_components.RouterLink;
-    __VLS_components.RouterLink;
-    // @ts-ignore
-    [RouterLink, RouterLink,];
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    __VLS_components.Column;
-    // @ts-ignore
-    [Column, Column, Column, Column,];
-    __VLS_components.Tag;
-    __VLS_components.Tag;
-    // @ts-ignore
-    [Tag,];
-    __VLS_components.InputGroup;
-    __VLS_components.InputGroup;
-    __VLS_components.InputGroup;
-    __VLS_components.InputGroup;
-    // @ts-ignore
-    [InputGroup, InputGroup,];
-    __VLS_components.TableFilter;
-    __VLS_components.TableFilter;
-    __VLS_components.TableFilter;
-    __VLS_components.TableFilter;
-    // @ts-ignore
-    [TableFilter, TableFilter,];
-    {
-        const __VLS_0 = __VLS_intrinsicElements["div"];
-        const __VLS_1 = __VLS_elementAsFunctionalComponent(__VLS_0);
-        const __VLS_2 = __VLS_1({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_1));
-        ({}({ ...{}, }));
-        {
-            const __VLS_5 = {}.ActionMenu;
-            const __VLS_6 = __VLS_asFunctionalComponent(__VLS_5, new __VLS_5({ ...{}, ref: ("actionMenuRef"), }));
-            ({}.ActionMenu);
-            ({}.ActionMenu);
-            const __VLS_7 = __VLS_6({ ...{}, ref: ("actionMenuRef"), }, ...__VLS_functionalComponentArgsRest(__VLS_6));
-            ({}({ ...{}, ref: ("actionMenuRef"), }));
-            // @ts-ignore
-            (__VLS_ctx.actionMenuRef);
-            const __VLS_8 = __VLS_pickFunctionalComponentCtx(__VLS_5, __VLS_7);
-        }
-        {
-            const __VLS_10 = {}.DataTable;
-            const __VLS_11 = __VLS_asFunctionalComponent(__VLS_10, new __VLS_10({ ...{ 'onPage': {}, 'onSort': {}, 'onFilter': {}, 'onSelectAllChange': {}, 'onRowSelect': {}, 'onRowUnselect': {}, }, value: ((__VLS_ctx.formData)), size: ("small"), lazy: (true), paginator: (true), rows: ((__VLS_ctx.rows)), first: ((__VLS_ctx.first)), columnResizeMode: ("fit"), filters: ((__VLS_ctx.filters.data)), ref: ("datatableRef"), dataKey: ("id"), totalRecords: ((__VLS_ctx.totalRecords)), loading: ((__VLS_ctx.loading || __VLS_ctx.columnLoading)), filterDisplay: ("menu"), rowHover: ((false)), breakpoint: ("780px"), stateStorage: ("local"), stateKey: ("dt-state-people-session"), globalFilterFields: ((__VLS_ctx.filters.globalField)), selection: ((__VLS_ctx.selectedCustomers)), selectAll: ((__VLS_ctx.selectAll)), rowsPerPageOptions: (([10, 25, 50])), resizableColumns: ((true)), paginatorTemplate: ("FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport"), currentPageReportTemplate: ("Showing {first} to {last} of {totalRecords}"), }));
-            ({}.DataTable);
-            ({}.DataTable);
-            const __VLS_12 = __VLS_11({ ...{ 'onPage': {}, 'onSort': {}, 'onFilter': {}, 'onSelectAllChange': {}, 'onRowSelect': {}, 'onRowUnselect': {}, }, value: ((__VLS_ctx.formData)), size: ("small"), lazy: (true), paginator: (true), rows: ((__VLS_ctx.rows)), first: ((__VLS_ctx.first)), columnResizeMode: ("fit"), filters: ((__VLS_ctx.filters.data)), ref: ("datatableRef"), dataKey: ("id"), totalRecords: ((__VLS_ctx.totalRecords)), loading: ((__VLS_ctx.loading || __VLS_ctx.columnLoading)), filterDisplay: ("menu"), rowHover: ((false)), breakpoint: ("780px"), stateStorage: ("local"), stateKey: ("dt-state-people-session"), globalFilterFields: ((__VLS_ctx.filters.globalField)), selection: ((__VLS_ctx.selectedCustomers)), selectAll: ((__VLS_ctx.selectAll)), rowsPerPageOptions: (([10, 25, 50])), resizableColumns: ((true)), paginatorTemplate: ("FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport"), currentPageReportTemplate: ("Showing {first} to {last} of {totalRecords}"), }, ...__VLS_functionalComponentArgsRest(__VLS_11));
-            ({}({ ...{ 'onPage': {}, 'onSort': {}, 'onFilter': {}, 'onSelectAllChange': {}, 'onRowSelect': {}, 'onRowUnselect': {}, }, value: ((__VLS_ctx.formData)), size: ("small"), lazy: (true), paginator: (true), rows: ((__VLS_ctx.rows)), first: ((__VLS_ctx.first)), columnResizeMode: ("fit"), filters: ((__VLS_ctx.filters.data)), ref: ("datatableRef"), dataKey: ("id"), totalRecords: ((__VLS_ctx.totalRecords)), loading: ((__VLS_ctx.loading || __VLS_ctx.columnLoading)), filterDisplay: ("menu"), rowHover: ((false)), breakpoint: ("780px"), stateStorage: ("local"), stateKey: ("dt-state-people-session"), globalFilterFields: ((__VLS_ctx.filters.globalField)), selection: ((__VLS_ctx.selectedCustomers)), selectAll: ((__VLS_ctx.selectAll)), rowsPerPageOptions: (([10, 25, 50])), resizableColumns: ((true)), paginatorTemplate: ("FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport"), currentPageReportTemplate: ("Showing {first} to {last} of {totalRecords}"), }));
-            // @ts-ignore
-            (__VLS_ctx.datatableRef);
-            let __VLS_15 = { 'page': __VLS_pickEvent(__VLS_14['page'], {}.onPage) };
-            __VLS_15 = { page: (__VLS_ctx.updateTable) };
-            let __VLS_16 = { 'sort': __VLS_pickEvent(__VLS_14['sort'], {}.onSort) };
-            __VLS_16 = { sort: (__VLS_ctx.updateTable) };
-            let __VLS_17 = { 'filter': __VLS_pickEvent(__VLS_14['filter'], {}.onFilter) };
-            __VLS_17 = { filter: (__VLS_ctx.updateTable) };
-            let __VLS_18 = { 'select-all-change': __VLS_pickEvent(__VLS_14['select-all-change'], {}.onSelectAllChange) };
-            __VLS_18 = { "select-all-change": (__VLS_ctx.onSelectAllChange) };
-            let __VLS_19 = { 'row-select': __VLS_pickEvent(__VLS_14['row-select'], {}.onRowSelect) };
-            __VLS_19 = { "row-select": (__VLS_ctx.onRowSelect) };
-            let __VLS_20 = { 'row-unselect': __VLS_pickEvent(__VLS_14['row-unselect'], {}.onRowUnselect) };
-            __VLS_20 = { "row-unselect": (__VLS_ctx.onRowUnselect) };
-            {
-                const __VLS_21 = __VLS_intrinsicElements["template"];
-                const __VLS_22 = __VLS_elementAsFunctionalComponent(__VLS_21);
-                const __VLS_23 = __VLS_22({ ...{}, class: ("rounded-t-md"), }, ...__VLS_functionalComponentArgsRest(__VLS_22));
-                ({}({ ...{}, class: ("rounded-t-md"), }));
-                {
-                    (__VLS_13.slots).header;
-                    {
-                        const __VLS_25 = __VLS_intrinsicElements["div"];
-                        const __VLS_26 = __VLS_elementAsFunctionalComponent(__VLS_25);
-                        const __VLS_27 = __VLS_26({ ...{}, class: ("flex justify-between"), }, ...__VLS_functionalComponentArgsRest(__VLS_26));
-                        ({}({ ...{}, class: ("flex justify-between"), }));
-                        {
-                            const __VLS_30 = {}.Button;
-                            const __VLS_31 = __VLS_asFunctionalComponent(__VLS_30, new __VLS_30({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-filter-slash"), label: ("Clear"), outlined: (true), size: ("small"), }));
-                            ({}.Button);
-                            const __VLS_32 = __VLS_31({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-filter-slash"), label: ("Clear"), outlined: (true), size: ("small"), }, ...__VLS_functionalComponentArgsRest(__VLS_31));
-                            ({}({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-filter-slash"), label: ("Clear"), outlined: (true), size: ("small"), }));
-                            let __VLS_35 = { 'click': __VLS_pickEvent(__VLS_34['click'], {}.onClick) };
-                            __VLS_35 = { click: (__VLS_ctx.clearFilter) };
-                            const __VLS_33 = __VLS_pickFunctionalComponentCtx(__VLS_30, __VLS_32);
-                            let __VLS_34;
-                        }
-                        {
-                            const __VLS_36 = {}.IconField;
-                            const __VLS_37 = __VLS_asFunctionalComponent(__VLS_36, new __VLS_36({ ...{}, iconPosition: ("left"), class: ("w-48 md:w-96"), }));
-                            ({}.IconField);
-                            ({}.IconField);
-                            const __VLS_38 = __VLS_37({ ...{}, iconPosition: ("left"), class: ("w-48 md:w-96"), }, ...__VLS_functionalComponentArgsRest(__VLS_37));
-                            ({}({ ...{}, iconPosition: ("left"), class: ("w-48 md:w-96"), }));
-                            {
-                                const __VLS_41 = {}.InputIcon;
-                                const __VLS_42 = __VLS_asFunctionalComponent(__VLS_41, new __VLS_41({ ...{}, size: ("small"), }));
-                                ({}.InputIcon);
-                                ({}.InputIcon);
-                                const __VLS_43 = __VLS_42({ ...{}, size: ("small"), }, ...__VLS_functionalComponentArgsRest(__VLS_42));
-                                ({}({ ...{}, size: ("small"), }));
-                                {
-                                    const __VLS_46 = __VLS_intrinsicElements["i"];
-                                    const __VLS_47 = __VLS_elementAsFunctionalComponent(__VLS_46);
-                                    const __VLS_48 = __VLS_47({ ...{}, class: ("pi pi-search pt-1"), }, ...__VLS_functionalComponentArgsRest(__VLS_47));
-                                    ({}({ ...{}, class: ("pi pi-search pt-1"), }));
-                                    const __VLS_49 = __VLS_pickFunctionalComponentCtx(__VLS_46, __VLS_48);
-                                }
-                                (__VLS_44.slots).default;
-                                const __VLS_44 = __VLS_pickFunctionalComponentCtx(__VLS_41, __VLS_43);
-                            }
-                            if (__VLS_ctx.filters.data?.global?.value !== undefined) {
-                                {
-                                    const __VLS_51 = {}.InputText;
-                                    const __VLS_52 = __VLS_asFunctionalComponent(__VLS_51, new __VLS_51({ ...{ 'onInput': {}, }, modelValue: ((__VLS_ctx.filters.data.global.value)), placeholder: ("Keyword Search"), class: ("pl-10 font-normal"), size: ("small"), }));
-                                    ({}.InputText);
-                                    const __VLS_53 = __VLS_52({ ...{ 'onInput': {}, }, modelValue: ((__VLS_ctx.filters.data.global.value)), placeholder: ("Keyword Search"), class: ("pl-10 font-normal"), size: ("small"), }, ...__VLS_functionalComponentArgsRest(__VLS_52));
-                                    ({}({ ...{ 'onInput': {}, }, modelValue: ((__VLS_ctx.filters.data.global.value)), placeholder: ("Keyword Search"), class: ("pl-10 font-normal"), size: ("small"), }));
-                                    let __VLS_56 = { 'input': __VLS_pickEvent(__VLS_55['input'], {}.onInput) };
-                                    __VLS_56 = { input: (__VLS_ctx.globalFilter) };
-                                    const __VLS_54 = __VLS_pickFunctionalComponentCtx(__VLS_51, __VLS_53);
-                                    let __VLS_55;
-                                }
-                                // @ts-ignore
-                                [actionMenuRef, formData, rows, first, filters, totalRecords, loading, columnLoading, filters, selectedCustomers, selectAll, formData, rows, first, filters, totalRecords, loading, columnLoading, filters, selectedCustomers, selectAll, formData, rows, first, filters, totalRecords, loading, columnLoading, filters, selectedCustomers, selectAll, datatableRef, updateTable, updateTable, updateTable, onSelectAllChange, onRowSelect, onRowUnselect, clearFilter, filters, filters, filters, filters, globalFilter,];
-                            }
-                            (__VLS_39.slots).default;
-                            const __VLS_39 = __VLS_pickFunctionalComponentCtx(__VLS_36, __VLS_38);
-                        }
-                        (__VLS_28.slots).default;
-                        const __VLS_28 = __VLS_pickFunctionalComponentCtx(__VLS_25, __VLS_27);
-                    }
-                }
-            }
-            {
-                const __VLS_57 = __VLS_intrinsicElements["template"];
-                const __VLS_58 = __VLS_elementAsFunctionalComponent(__VLS_57);
-                const __VLS_59 = __VLS_58({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_58));
-                ({}({ ...{}, }));
-                {
-                    (__VLS_13.slots).loading;
-                    {
-                        const __VLS_61 = {}.Loader;
-                        const __VLS_62 = __VLS_asFunctionalComponent(__VLS_61, new __VLS_61({ ...{}, color: ("rgb(var(--primary-400))"), }));
-                        ({}.Loader);
-                        ({}.Loader);
-                        const __VLS_63 = __VLS_62({ ...{}, color: ("rgb(var(--primary-400))"), }, ...__VLS_functionalComponentArgsRest(__VLS_62));
-                        ({}({ ...{}, color: ("rgb(var(--primary-400))"), }));
-                        const __VLS_64 = __VLS_pickFunctionalComponentCtx(__VLS_61, __VLS_63);
-                    }
-                }
-            }
-            {
-                const __VLS_66 = __VLS_intrinsicElements["template"];
-                const __VLS_67 = __VLS_elementAsFunctionalComponent(__VLS_66);
-                const __VLS_68 = __VLS_67({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_67));
-                ({}({ ...{}, }));
-                {
-                    (__VLS_13.slots).empty;
-                    if (!__VLS_ctx.loading && !__VLS_ctx.columnLoading) {
-                        {
-                            const __VLS_70 = __VLS_intrinsicElements["p"];
-                            const __VLS_71 = __VLS_elementAsFunctionalComponent(__VLS_70);
-                            const __VLS_72 = __VLS_71({ ...{}, class: ("flex justify-center items-center gap-2 text-primary-400 "), }, ...__VLS_functionalComponentArgsRest(__VLS_71));
-                            ({}({ ...{}, class: ("flex justify-center items-center gap-2 text-primary-400 "), }));
-                            {
-                                const __VLS_75 = {}.RouterLink;
-                                const __VLS_76 = __VLS_asFunctionalComponent(__VLS_75, new __VLS_75({ ...{}, to: (({ name: 'create-form' })), }));
-                                ({}.RouterLink);
-                                ({}.RouterLink);
-                                const __VLS_77 = __VLS_76({ ...{}, to: (({ name: 'create-form' })), }, ...__VLS_functionalComponentArgsRest(__VLS_76));
-                                ({}({ ...{}, to: (({ name: 'create-form' })), }));
-                                {
-                                    const __VLS_80 = {}.Button;
-                                    const __VLS_81 = __VLS_asFunctionalComponent(__VLS_80, new __VLS_80({ ...{}, label: ("Add form"), icon: ("pi pi-plus"), size: ("small"), }));
-                                    ({}.Button);
-                                    const __VLS_82 = __VLS_81({ ...{}, label: ("Add form"), icon: ("pi pi-plus"), size: ("small"), }, ...__VLS_functionalComponentArgsRest(__VLS_81));
-                                    ({}({ ...{}, label: ("Add form"), icon: ("pi pi-plus"), size: ("small"), }));
-                                    const __VLS_83 = __VLS_pickFunctionalComponentCtx(__VLS_80, __VLS_82);
-                                }
-                                (__VLS_78.slots).default;
-                                const __VLS_78 = __VLS_pickFunctionalComponentCtx(__VLS_75, __VLS_77);
-                            }
-                            (__VLS_73.slots).default;
-                            const __VLS_73 = __VLS_pickFunctionalComponentCtx(__VLS_70, __VLS_72);
-                        }
-                        // @ts-ignore
-                        [loading, columnLoading,];
-                    }
-                }
-            }
-            for (const [col, key] of __VLS_getVForSourceType((__VLS_ctx.columns))) {
-                {
-                    const __VLS_85 = __VLS_intrinsicElements["div"];
-                    const __VLS_86 = __VLS_elementAsFunctionalComponent(__VLS_85);
-                    const __VLS_87 = __VLS_86({ ...{}, key: ((key.toString())), }, ...__VLS_functionalComponentArgsRest(__VLS_86));
-                    ({}({ ...{}, key: ((key.toString())), }));
-                    if (key.toString() === 'multiple') {
-                        {
-                            const __VLS_90 = {}.Column;
-                            const __VLS_91 = __VLS_asFunctionalComponent(__VLS_90, new __VLS_90({ ...{}, selectionMode: ("multiple"), class: ((col.class)), style: ((col.style)), }));
-                            ({}.Column);
-                            ({}.Column);
-                            const __VLS_92 = __VLS_91({ ...{}, selectionMode: ("multiple"), class: ((col.class)), style: ((col.style)), }, ...__VLS_functionalComponentArgsRest(__VLS_91));
-                            ({}({ ...{}, selectionMode: ("multiple"), class: ((col.class)), style: ((col.style)), }));
-                            const __VLS_93 = __VLS_pickFunctionalComponentCtx(__VLS_90, __VLS_92);
-                        }
-                        // @ts-ignore
-                        [columns,];
-                    }
-                    else {
-                        {
-                            const __VLS_95 = {}.Column;
-                            const __VLS_96 = __VLS_asFunctionalComponent(__VLS_95, new __VLS_95({ ...{}, field: ((key.toString())), dataType: ((col.dataType)), header: ((col.header)), sortable: ((col.sortable)), filterField: ((key.toString())), filterMatchMode: ((col.filter !== false && col?.filter?.mode ? col.filter.mode : ' ')), class: ((col.class)), showFilterMenu: ((col.filter !== false)), style: ((col.style)), }));
-                            ({}.Column);
-                            ({}.Column);
-                            const __VLS_97 = __VLS_96({ ...{}, field: ((key.toString())), dataType: ((col.dataType)), header: ((col.header)), sortable: ((col.sortable)), filterField: ((key.toString())), filterMatchMode: ((col.filter !== false && col?.filter?.mode ? col.filter.mode : ' ')), class: ((col.class)), showFilterMenu: ((col.filter !== false)), style: ((col.style)), }, ...__VLS_functionalComponentArgsRest(__VLS_96));
-                            ({}({ ...{}, field: ((key.toString())), dataType: ((col.dataType)), header: ((col.header)), sortable: ((col.sortable)), filterField: ((key.toString())), filterMatchMode: ((col.filter !== false && col?.filter?.mode ? col.filter.mode : ' ')), class: ((col.class)), showFilterMenu: ((col.filter !== false)), style: ((col.style)), }));
-                            {
-                                const __VLS_100 = __VLS_intrinsicElements["template"];
-                                const __VLS_101 = __VLS_elementAsFunctionalComponent(__VLS_100);
-                                const __VLS_102 = __VLS_101({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_101));
-                                ({}({ ...{}, }));
-                                {
-                                    const [{ data, field }] = __VLS_getSlotParams((__VLS_98.slots).body);
-                                    if (key.toString() === 'action') {
-                                        {
-                                            const __VLS_104 = __VLS_intrinsicElements["div"];
-                                            const __VLS_105 = __VLS_elementAsFunctionalComponent(__VLS_104);
-                                            const __VLS_106 = __VLS_105({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_105));
-                                            ({}({ ...{}, }));
-                                            {
-                                                const __VLS_109 = {}.Button;
-                                                const __VLS_110 = __VLS_asFunctionalComponent(__VLS_109, new __VLS_109({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-ellipsis-v"), "aria-haspopup": ("true"), "aria-controls": ("action_menu"), size: ("small"), class: ("h-8 w-8"), }));
-                                                ({}.Button);
-                                                const __VLS_111 = __VLS_110({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-ellipsis-v"), "aria-haspopup": ("true"), "aria-controls": ("action_menu"), size: ("small"), class: ("h-8 w-8"), }, ...__VLS_functionalComponentArgsRest(__VLS_110));
-                                                ({}({ ...{ 'onClick': {}, }, type: ("button"), icon: ("pi pi-ellipsis-v"), "aria-haspopup": ("true"), "aria-controls": ("action_menu"), size: ("small"), class: ("h-8 w-8"), }));
-                                                let __VLS_114 = { 'click': __VLS_pickEvent(__VLS_113['click'], {}.onClick) };
-                                                __VLS_114 = { click: ((event) => __VLS_ctx.actionMenuRef.toggle(event, data)) };
-                                                const __VLS_112 = __VLS_pickFunctionalComponentCtx(__VLS_109, __VLS_111);
-                                                let __VLS_113;
-                                            }
-                                            (__VLS_107.slots).default;
-                                            const __VLS_107 = __VLS_pickFunctionalComponentCtx(__VLS_104, __VLS_106);
-                                        }
-                                        // @ts-ignore
-                                        [actionMenuRef,];
-                                    }
-                                    else if (key.toString() === 'status') {
-                                        {
-                                            const __VLS_115 = __VLS_intrinsicElements["div"];
-                                            const __VLS_116 = __VLS_elementAsFunctionalComponent(__VLS_115);
-                                            const __VLS_117 = __VLS_116({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_116));
-                                            ({}({ ...{}, }));
-                                            {
-                                                const __VLS_120 = {}.Tag;
-                                                const __VLS_121 = __VLS_asFunctionalComponent(__VLS_120, new __VLS_120({ ...{}, value: ((data[field] || '-')), severity: ((data?.severity ? data.severity : null)), }));
-                                                ({}.Tag);
-                                                const __VLS_122 = __VLS_121({ ...{}, value: ((data[field] || '-')), severity: ((data?.severity ? data.severity : null)), }, ...__VLS_functionalComponentArgsRest(__VLS_121));
-                                                ({}({ ...{}, value: ((data[field] || '-')), severity: ((data?.severity ? data.severity : null)), }));
-                                                const __VLS_123 = __VLS_pickFunctionalComponentCtx(__VLS_120, __VLS_122);
-                                            }
-                                            (__VLS_118.slots).default;
-                                            const __VLS_118 = __VLS_pickFunctionalComponentCtx(__VLS_115, __VLS_117);
-                                        }
-                                    }
-                                    else if (key.toString() === 'shortcode') {
-                                        {
-                                            const __VLS_125 = __VLS_intrinsicElements["div"];
-                                            const __VLS_126 = __VLS_elementAsFunctionalComponent(__VLS_125);
-                                            const __VLS_127 = __VLS_126({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_126));
-                                            ({}({ ...{}, }));
-                                            {
-                                                const __VLS_130 = {}.InputGroup;
-                                                const __VLS_131 = __VLS_asFunctionalComponent(__VLS_130, new __VLS_130({ ...{}, class: ("h-8"), }));
-                                                ({}.InputGroup);
-                                                ({}.InputGroup);
-                                                const __VLS_132 = __VLS_131({ ...{}, class: ("h-8"), }, ...__VLS_functionalComponentArgsRest(__VLS_131));
-                                                ({}({ ...{}, class: ("h-8"), }));
-                                                {
-                                                    const __VLS_135 = {}.InputText;
-                                                    const __VLS_136 = __VLS_asFunctionalComponent(__VLS_135, new __VLS_135({ ...{}, value: ((data[field])), readonly: (true), }));
-                                                    ({}.InputText);
-                                                    const __VLS_137 = __VLS_136({ ...{}, value: ((data[field])), readonly: (true), }, ...__VLS_functionalComponentArgsRest(__VLS_136));
-                                                    ({}({ ...{}, value: ((data[field])), readonly: (true), }));
-                                                    const __VLS_138 = __VLS_pickFunctionalComponentCtx(__VLS_135, __VLS_137);
-                                                }
-                                                {
-                                                    const __VLS_140 = {}.Button;
-                                                    const __VLS_141 = __VLS_asFunctionalComponent(__VLS_140, new __VLS_140({ ...{ 'onClick': {}, }, icon: ("pi pi-copy"), size: ("small"), }));
-                                                    ({}.Button);
-                                                    const __VLS_142 = __VLS_141({ ...{ 'onClick': {}, }, icon: ("pi pi-copy"), size: ("small"), }, ...__VLS_functionalComponentArgsRest(__VLS_141));
-                                                    ({}({ ...{ 'onClick': {}, }, icon: ("pi pi-copy"), size: ("small"), }));
-                                                    let __VLS_145 = { 'click': __VLS_pickEvent(__VLS_144['click'], {}.onClick) };
-                                                    __VLS_145 = { click: $event => {
-                                                            if (!(!((key.toString() === 'multiple'))))
-                                                                return;
-                                                            if (!(!((key.toString() === 'action'))))
-                                                                return;
-                                                            if (!(!((key.toString() === 'status'))))
-                                                                return;
-                                                            if (!((key.toString() === 'shortcode')))
-                                                                return;
-                                                            __VLS_ctx.copyToClipboard(data[field] || '');
-                                                            // @ts-ignore
-                                                            [copyToClipboard,];
-                                                        }
-                                                    };
-                                                    const __VLS_143 = __VLS_pickFunctionalComponentCtx(__VLS_140, __VLS_142);
-                                                    let __VLS_144;
-                                                }
-                                                (__VLS_133.slots).default;
-                                                const __VLS_133 = __VLS_pickFunctionalComponentCtx(__VLS_130, __VLS_132);
-                                            }
-                                            (__VLS_128.slots).default;
-                                            const __VLS_128 = __VLS_pickFunctionalComponentCtx(__VLS_125, __VLS_127);
-                                        }
-                                    }
-                                    else {
-                                        {
-                                            const __VLS_146 = __VLS_intrinsicElements["div"];
-                                            const __VLS_147 = __VLS_elementAsFunctionalComponent(__VLS_146);
-                                            const __VLS_148 = __VLS_147({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_147));
-                                            ({}({ ...{}, }));
-                                            (data[field] || '-');
-                                            (__VLS_149.slots).default;
-                                            const __VLS_149 = __VLS_pickFunctionalComponentCtx(__VLS_146, __VLS_148);
-                                        }
-                                    }
-                                }
-                            }
-                            {
-                                const __VLS_151 = __VLS_intrinsicElements["template"];
-                                const __VLS_152 = __VLS_elementAsFunctionalComponent(__VLS_151);
-                                const __VLS_153 = __VLS_152({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_152));
-                                ({}({ ...{}, }));
-                                {
-                                    const [{ filterModel }] = __VLS_getSlotParams((__VLS_98.slots).filter);
-                                    {
-                                        const __VLS_155 = {}.TableFilter;
-                                        const __VLS_156 = __VLS_asFunctionalComponent(__VLS_155, new __VLS_155({ ...{}, columnData: ((col)), filterModel: ((filterModel)), }));
-                                        ({}.TableFilter);
-                                        ({}.TableFilter);
-                                        const __VLS_157 = __VLS_156({ ...{}, columnData: ((col)), filterModel: ((filterModel)), }, ...__VLS_functionalComponentArgsRest(__VLS_156));
-                                        ({}({ ...{}, columnData: ((col)), filterModel: ((filterModel)), }));
-                                        const __VLS_158 = __VLS_pickFunctionalComponentCtx(__VLS_155, __VLS_157);
-                                    }
-                                }
-                            }
-                            const __VLS_98 = __VLS_pickFunctionalComponentCtx(__VLS_95, __VLS_97);
-                        }
-                    }
-                    (__VLS_88.slots).default;
-                    const __VLS_88 = __VLS_pickFunctionalComponentCtx(__VLS_85, __VLS_87);
-                }
-            }
-            const __VLS_13 = __VLS_pickFunctionalComponentCtx(__VLS_10, __VLS_12);
-            let __VLS_14;
-        }
-        (__VLS_3.slots).default;
-        const __VLS_3 = __VLS_pickFunctionalComponentCtx(__VLS_0, __VLS_2);
+    const __VLS_33 = __VLS_asFunctionalComponent(__VLS_32, new __VLS_32({
+        size: "small",
+    }));
+    const __VLS_34 = __VLS_33({
+        size: "small",
+    }, ...__VLS_functionalComponentArgsRest(__VLS_33));
+    __VLS_35.slots.default;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.i)({
+        ...{ class: "pi pi-search pt-1" },
+    });
+    var __VLS_35;
+    if (__VLS_ctx.filters.data?.global?.value !== undefined) {
+        const __VLS_36 = {}.InputText;
+        /** @type {[typeof __VLS_components.InputText, ]} */ ;
+        // @ts-ignore
+        const __VLS_37 = __VLS_asFunctionalComponent(__VLS_36, new __VLS_36({
+            ...{ 'onInput': {} },
+            modelValue: (__VLS_ctx.filters.data.global.value),
+            placeholder: "Keyword Search",
+            ...{ class: "pl-10 font-normal" },
+            size: "small",
+        }));
+        const __VLS_38 = __VLS_37({
+            ...{ 'onInput': {} },
+            modelValue: (__VLS_ctx.filters.data.global.value),
+            placeholder: "Keyword Search",
+            ...{ class: "pl-10 font-normal" },
+            size: "small",
+        }, ...__VLS_functionalComponentArgsRest(__VLS_37));
+        let __VLS_40;
+        let __VLS_41;
+        let __VLS_42;
+        const __VLS_43 = {
+            onInput: (__VLS_ctx.globalFilter)
+        };
+        var __VLS_39;
     }
-    if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
-    }
-    var __VLS_slots;
-    return __VLS_slots;
+    var __VLS_31;
 }
-const __VLS_internalComponent = (await import('vue')).defineComponent({
+{
+    const { loading: __VLS_thisSlot } = __VLS_8.slots;
+    /** @type {[typeof Loader, typeof Loader, ]} */ ;
+    // @ts-ignore
+    const __VLS_44 = __VLS_asFunctionalComponent(Loader, new Loader({
+        color: "rgb(var(--primary-400))",
+    }));
+    const __VLS_45 = __VLS_44({
+        color: "rgb(var(--primary-400))",
+    }, ...__VLS_functionalComponentArgsRest(__VLS_44));
+}
+{
+    const { empty: __VLS_thisSlot } = __VLS_8.slots;
+    if (!__VLS_ctx.loading && !__VLS_ctx.columnLoading) {
+        __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
+            ...{ class: "flex justify-center items-center gap-2 text-primary-400 " },
+        });
+        const __VLS_47 = {}.RouterLink;
+        /** @type {[typeof __VLS_components.RouterLink, typeof __VLS_components.RouterLink, ]} */ ;
+        // @ts-ignore
+        const __VLS_48 = __VLS_asFunctionalComponent(__VLS_47, new __VLS_47({
+            to: ({ name: 'create-form' }),
+        }));
+        const __VLS_49 = __VLS_48({
+            to: ({ name: 'create-form' }),
+        }, ...__VLS_functionalComponentArgsRest(__VLS_48));
+        __VLS_50.slots.default;
+        const __VLS_51 = {}.Button;
+        /** @type {[typeof __VLS_components.Button, ]} */ ;
+        // @ts-ignore
+        const __VLS_52 = __VLS_asFunctionalComponent(__VLS_51, new __VLS_51({
+            label: "Add form",
+            icon: "pi pi-plus",
+            size: "small",
+        }));
+        const __VLS_53 = __VLS_52({
+            label: "Add form",
+            icon: "pi pi-plus",
+            size: "small",
+        }, ...__VLS_functionalComponentArgsRest(__VLS_52));
+        var __VLS_50;
+    }
+}
+for (const [col, key] of __VLS_getVForSourceType((__VLS_ctx.columns))) {
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+        key: (key.toString()),
+    });
+    if (key.toString() === 'multiple') {
+        const __VLS_55 = {}.Column;
+        /** @type {[typeof __VLS_components.Column, typeof __VLS_components.Column, ]} */ ;
+        // @ts-ignore
+        const __VLS_56 = __VLS_asFunctionalComponent(__VLS_55, new __VLS_55({
+            selectionMode: "multiple",
+            ...{ class: (col.class) },
+            ...{ style: (col.style) },
+        }));
+        const __VLS_57 = __VLS_56({
+            selectionMode: "multiple",
+            ...{ class: (col.class) },
+            ...{ style: (col.style) },
+        }, ...__VLS_functionalComponentArgsRest(__VLS_56));
+    }
+    else {
+        const __VLS_59 = {}.Column;
+        /** @type {[typeof __VLS_components.Column, typeof __VLS_components.Column, ]} */ ;
+        // @ts-ignore
+        const __VLS_60 = __VLS_asFunctionalComponent(__VLS_59, new __VLS_59({
+            field: (key.toString()),
+            dataType: (col.dataType),
+            header: (col.header),
+            sortable: (col.sortable),
+            filterField: (key.toString()),
+            filterMatchMode: (col.filter !== false && col?.filter?.mode ? col.filter.mode : ' '),
+            ...{ class: (col.class) },
+            showFilterMenu: (col.filter !== false),
+            ...{ style: (col.style) },
+        }));
+        const __VLS_61 = __VLS_60({
+            field: (key.toString()),
+            dataType: (col.dataType),
+            header: (col.header),
+            sortable: (col.sortable),
+            filterField: (key.toString()),
+            filterMatchMode: (col.filter !== false && col?.filter?.mode ? col.filter.mode : ' '),
+            ...{ class: (col.class) },
+            showFilterMenu: (col.filter !== false),
+            ...{ style: (col.style) },
+        }, ...__VLS_functionalComponentArgsRest(__VLS_60));
+        __VLS_62.slots.default;
+        {
+            const { body: __VLS_thisSlot } = __VLS_62.slots;
+            const [{ data, field }] = __VLS_getSlotParams(__VLS_thisSlot);
+            if (key.toString() === 'action') {
+                __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+                const __VLS_63 = {}.Button;
+                /** @type {[typeof __VLS_components.Button, ]} */ ;
+                // @ts-ignore
+                const __VLS_64 = __VLS_asFunctionalComponent(__VLS_63, new __VLS_63({
+                    ...{ 'onClick': {} },
+                    type: "button",
+                    icon: "pi pi-ellipsis-v",
+                    'aria-haspopup': "true",
+                    'aria-controls': "action_menu",
+                    size: "small",
+                    ...{ class: "h-8 w-8" },
+                }));
+                const __VLS_65 = __VLS_64({
+                    ...{ 'onClick': {} },
+                    type: "button",
+                    icon: "pi pi-ellipsis-v",
+                    'aria-haspopup': "true",
+                    'aria-controls': "action_menu",
+                    size: "small",
+                    ...{ class: "h-8 w-8" },
+                }, ...__VLS_functionalComponentArgsRest(__VLS_64));
+                let __VLS_67;
+                let __VLS_68;
+                let __VLS_69;
+                const __VLS_70 = {
+                    onClick: ((event) => __VLS_ctx.actionMenuRef.toggle(event, data))
+                };
+                var __VLS_66;
+            }
+            else if (key.toString() === 'status') {
+                __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+                const __VLS_71 = {}.Tag;
+                /** @type {[typeof __VLS_components.Tag, ]} */ ;
+                // @ts-ignore
+                const __VLS_72 = __VLS_asFunctionalComponent(__VLS_71, new __VLS_71({
+                    value: (data[field] || '-'),
+                    severity: (data?.severity ? data.severity : null),
+                }));
+                const __VLS_73 = __VLS_72({
+                    value: (data[field] || '-'),
+                    severity: (data?.severity ? data.severity : null),
+                }, ...__VLS_functionalComponentArgsRest(__VLS_72));
+            }
+            else if (key.toString() === 'shortcode') {
+                __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+                const __VLS_75 = {}.InputGroup;
+                /** @type {[typeof __VLS_components.InputGroup, typeof __VLS_components.InputGroup, ]} */ ;
+                // @ts-ignore
+                const __VLS_76 = __VLS_asFunctionalComponent(__VLS_75, new __VLS_75({
+                    ...{ class: "h-8" },
+                }));
+                const __VLS_77 = __VLS_76({
+                    ...{ class: "h-8" },
+                }, ...__VLS_functionalComponentArgsRest(__VLS_76));
+                __VLS_78.slots.default;
+                const __VLS_79 = {}.InputText;
+                /** @type {[typeof __VLS_components.InputText, ]} */ ;
+                // @ts-ignore
+                const __VLS_80 = __VLS_asFunctionalComponent(__VLS_79, new __VLS_79({
+                    value: (data[field]),
+                    readonly: true,
+                }));
+                const __VLS_81 = __VLS_80({
+                    value: (data[field]),
+                    readonly: true,
+                }, ...__VLS_functionalComponentArgsRest(__VLS_80));
+                const __VLS_83 = {}.Button;
+                /** @type {[typeof __VLS_components.Button, ]} */ ;
+                // @ts-ignore
+                const __VLS_84 = __VLS_asFunctionalComponent(__VLS_83, new __VLS_83({
+                    ...{ 'onClick': {} },
+                    icon: "pi pi-copy",
+                    size: "small",
+                }));
+                const __VLS_85 = __VLS_84({
+                    ...{ 'onClick': {} },
+                    icon: "pi pi-copy",
+                    size: "small",
+                }, ...__VLS_functionalComponentArgsRest(__VLS_84));
+                let __VLS_87;
+                let __VLS_88;
+                let __VLS_89;
+                const __VLS_90 = {
+                    onClick: (...[$event]) => {
+                        if (!!(key.toString() === 'multiple'))
+                            return;
+                        if (!!(key.toString() === 'action'))
+                            return;
+                        if (!!(key.toString() === 'status'))
+                            return;
+                        if (!(key.toString() === 'shortcode'))
+                            return;
+                        __VLS_ctx.copyToClipboard(data[field] || '');
+                    }
+                };
+                var __VLS_86;
+                var __VLS_78;
+            }
+            else {
+                __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+                (data[field] || '-');
+            }
+        }
+        {
+            const { filter: __VLS_thisSlot } = __VLS_62.slots;
+            const [{ filterModel }] = __VLS_getSlotParams(__VLS_thisSlot);
+            /** @type {[typeof TableFilter, typeof TableFilter, ]} */ ;
+            // @ts-ignore
+            const __VLS_91 = __VLS_asFunctionalComponent(TableFilter, new TableFilter({
+                columnData: (col),
+                filterModel: (filterModel),
+            }));
+            const __VLS_92 = __VLS_91({
+                columnData: (col),
+                filterModel: (filterModel),
+            }, ...__VLS_functionalComponentArgsRest(__VLS_91));
+        }
+        var __VLS_62;
+    }
+}
+var __VLS_8;
+/** @type {__VLS_StyleScopedClasses['flex']} */ ;
+/** @type {__VLS_StyleScopedClasses['justify-between']} */ ;
+/** @type {__VLS_StyleScopedClasses['w-48']} */ ;
+/** @type {__VLS_StyleScopedClasses['md:w-96']} */ ;
+/** @type {__VLS_StyleScopedClasses['pi']} */ ;
+/** @type {__VLS_StyleScopedClasses['pi-search']} */ ;
+/** @type {__VLS_StyleScopedClasses['pt-1']} */ ;
+/** @type {__VLS_StyleScopedClasses['pl-10']} */ ;
+/** @type {__VLS_StyleScopedClasses['font-normal']} */ ;
+/** @type {__VLS_StyleScopedClasses['flex']} */ ;
+/** @type {__VLS_StyleScopedClasses['justify-center']} */ ;
+/** @type {__VLS_StyleScopedClasses['items-center']} */ ;
+/** @type {__VLS_StyleScopedClasses['gap-2']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-primary-400']} */ ;
+/** @type {__VLS_StyleScopedClasses['h-8']} */ ;
+/** @type {__VLS_StyleScopedClasses['w-8']} */ ;
+/** @type {__VLS_StyleScopedClasses['h-8']} */ ;
+// @ts-ignore
+var __VLS_4 = __VLS_3, __VLS_19 = __VLS_18;
+var __VLS_dollars;
+const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
             DataTable: DataTable,
@@ -601,3 +568,4 @@ export default (await import('vue')).defineComponent({
         return {};
     },
 });
+; /* PartiallyEnd: #4569/main.vue */

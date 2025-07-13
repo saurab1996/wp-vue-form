@@ -7,59 +7,143 @@ $elements = array(
     'displayErrors' => false,
     'addClass' => 'vf-survey',
     'addID' => 'vf-survey',
-    'schema' => array(
-        'page_title' => array(
+    'schema' => [
+        'page_title' => [
             'type' => 'static',
-            'content' => 'Fill in this survey',
+            'content' => 'Create account',
             'tag' => 'h1',
-        ),
-        'divider' => array(
+        ],
+        'divider' => [
             'type' => 'static',
             'tag' => 'hr',
-        ),
-        'question1' => array(
-            'type' => "text",
-            'label' => "Your name"
-        ),
-        'question2' => array(
-            'type' => "text",
-            'label' => "Your age",
-            'columns' => 6
-        ),
-        'question3' => array(
-            'type' => "select",
-            'label' => "Your gender",
-            'items' => ["Male", "Female", "X"],
-            'columns' => 6,
-            'conditions' => [
-                ["question2", "==", "saurab"]
-            ]
-        ),
-        'question4' => array(
-            'type' => "select",
-            'label' => "How likely are you to recommend our services?",
-            'default' => 5,
-            'items' => [1,2,3,4,5,6,7,8,9,10],
-            'description' => "1 means very unlikely, 10 means very likely"
-        ),
-        'question5' => array(
-            'type' => "textarea",
-            'label' => "Please share more details",
-            'columns' => 12,
-            'conditions' => [
-                ["question4", "<", 4]
+        ],
+        'container' => [
+            'type' => 'group',
+            'schema' => [
+                'first_name' => [
+                    'type' => 'text',
+                    'placeholder' => 'First name',
+                    'columns' => [
+                        'container' => 6,
+                        'label' => 12,
+                        'wrapper' => 12,
+                    ],
+                    'fieldName' => 'First name',
+                    'rules' => [
+                        'required',
+                        'max:255',
+                    ],
+                ],
+                'last_name' => [
+                    'type' => 'text',
+                    'placeholder' => 'Last name',
+                    'columns' => [
+                        'container' => 6,
+                        'label' => 12,
+                        'wrapper' => 12,
+                    ],
+                    'fieldName' => 'Last name',
+                    'rules' => [
+                        'required',
+                        'max:255',
+                    ],
+                ],
             ],
-            'rules' => ["required"],
-            'messages' => array(
-                'required' => 'Please fill share more field'
-            )
-        ),
-        'button' => array(
-            'type' => "button",
-            'buttonLabel' => "Submit",
-            'submits' => true
-        )
-    )
+            'description' => 'Make sure it matches your legal name',
+        ],
+        'birthday' => [
+            'type' => 'date',
+            'placeholder' => 'Birthday',
+            'fieldName' => 'Birthday',
+            'rules' => [
+                'required',
+            ],
+            'description' => 'Your birthday is not visible others.',
+            'displayFormat' => 'MMMM Do, YYYY',
+        ],
+        'country' => [
+            'type' => 'select',
+            'search' => true,
+            'native' => false,
+            'inputType' => 'search',
+            'autocomplete' => 'disabled',
+            'placeholder' => 'Country',
+            'items' => '/json/countries.json',
+        ],
+        'state' => [
+            'type' => 'select',
+            'search' => true,
+            'native' => false,
+            'inputType' => 'search',
+            'autocomplete' => 'disabled',
+            'placeholder' => 'State',
+            'items' => '/json/states.json',
+            'conditions' => [
+                ['country', 'in', ['US']],
+            ],
+        ],
+        'phone' => [
+            'type' => 'phone',
+            'placeholder' => 'Phone',
+            'rules' => [
+                'required',
+            ],
+            'fieldName' => 'Phone',
+            'allowIncomplete' => true,
+            'unmask' => true,
+        ],
+        'email' => [
+            'type' => 'text',
+            'inputType' => 'email',
+            'rules' => [
+                'required',
+                'max:255',
+                'email',
+            ],
+            'placeholder' => 'Email',
+            'fieldName' => 'Email',
+            'description' => 'You will receive a confirmation letter to this email.',
+        ],
+        'password' => [
+            'type' => 'text',
+            'inputType' => 'password',
+            'rules' => [
+                'required',
+                'min:8',
+                'same:password_confirmation',
+            ],
+            'fieldName' => 'Password',
+            'placeholder' => 'Password',
+        ],
+        'password_confirmation' => [
+            'type' => 'text',
+            'inputType' => 'password',
+            'rules' => [
+                'required',
+            ],
+            'fieldName' => 'Password confirmation',
+            'placeholder' => 'Password again',
+        ],
+        'terms' => [
+            'type' => 'checkbox',
+            'text' => 'I accept the Terms & Conditions & Privacy Policy',
+        ],
+        'marketing_emails' => [
+            'type' => 'checkbox',
+            'text' => 'I want to recieve marketing emails',
+        ],
+        'divider_1' => [
+            'type' => 'static',
+            'tag' => 'hr',
+        ],
+        'register' => [
+            'type' => 'button',
+            'submits' => true,
+            'buttonLabel' => 'Create account',
+            'full' => true,
+            'size' => 'lg',
+        ],
+    ],
 );
 
 $style = "

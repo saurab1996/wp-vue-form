@@ -1,12 +1,12 @@
 import {resolve} from 'path';
-import { defineConfig, UserConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import VueDevTools from 'vite-plugin-vue-devtools';
 const root = resolve(__dirname,'src');
 
 // Define the configuration function
-const configFunction = ({ command, mode }: { command:string, mode: string }): UserConfig => {
+const configFunction = ({ }: { command:string, mode: string }): UserConfig => {
 
   return {
     root: root, // Set the root directory to src/frontend

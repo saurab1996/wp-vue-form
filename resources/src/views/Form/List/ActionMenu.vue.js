@@ -1,10 +1,9 @@
-/* __placeholder__ */
+/// <reference types="../../../../node_modules/.vue-global-types/vue_3.4_0_0_0.d.ts" />
 import { ref, reactive } from 'vue';
 import Menu from 'primevue/menu';
 import { confirmBox } from '@/utils/helpers';
 import { useConfirm } from "primevue/useconfirm";
 import { useRouter } from 'vue-router';
-const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const router = useRouter();
 const confirm = useConfirm();
 let rowData = reactive({});
@@ -67,55 +66,34 @@ const toggle = (event = {}, data) => {
 const __VLS_exposed = {
     toggle
 };
-defineExpose({
-    toggle
-});
-let __VLS_modelEmitsType;
-const __VLS_componentsOption = {};
-let __VLS_name;
-function __VLS_template() {
-    let __VLS_ctx;
-    /* Components */
-    let __VLS_otherComponents;
-    let __VLS_own;
-    let __VLS_localComponents;
-    let __VLS_components;
-    let __VLS_styleScopedClasses;
-    /* CSS variable injection */
-    /* CSS variable injection end */
-    let __VLS_resolvedLocalAndGlobalComponents;
-    __VLS_intrinsicElements.div;
-    __VLS_intrinsicElements.div;
-    __VLS_components.Menu;
-    __VLS_components.Menu;
-    // @ts-ignore
-    [Menu,];
-    {
-        const __VLS_0 = __VLS_intrinsicElements["div"];
-        const __VLS_1 = __VLS_elementAsFunctionalComponent(__VLS_0);
-        const __VLS_2 = __VLS_1({ ...{}, }, ...__VLS_functionalComponentArgsRest(__VLS_1));
-        ({}({ ...{}, }));
-        {
-            const __VLS_5 = {}.Menu;
-            const __VLS_6 = __VLS_asFunctionalComponent(__VLS_5, new __VLS_5({ ...{}, ref: ("MenuRef"), id: ("action_menu"), model: ((__VLS_ctx.actionItems)), popup: ((true)), }));
-            ({}.Menu);
-            const __VLS_7 = __VLS_6({ ...{}, ref: ("MenuRef"), id: ("action_menu"), model: ((__VLS_ctx.actionItems)), popup: ((true)), }, ...__VLS_functionalComponentArgsRest(__VLS_6));
-            ({}({ ...{}, ref: ("MenuRef"), id: ("action_menu"), model: ((__VLS_ctx.actionItems)), popup: ((true)), }));
-            // @ts-ignore
-            (__VLS_ctx.MenuRef);
-            const __VLS_8 = __VLS_pickFunctionalComponentCtx(__VLS_5, __VLS_7);
-        }
-        (__VLS_3.slots).default;
-        const __VLS_3 = __VLS_pickFunctionalComponentCtx(__VLS_0, __VLS_2);
-    }
-    if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
-    }
-    var __VLS_slots;
-    // @ts-ignore
-    [actionItems, actionItems, actionItems, MenuRef,];
-    return __VLS_slots;
-}
-const __VLS_internalComponent = (await import('vue')).defineComponent({
+defineExpose(__VLS_exposed);
+debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
+const __VLS_ctx = {};
+let __VLS_components;
+let __VLS_directives;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+const __VLS_0 = {}.Menu;
+/** @type {[typeof __VLS_components.Menu, ]} */ ;
+// @ts-ignore
+const __VLS_1 = __VLS_asFunctionalComponent(__VLS_0, new __VLS_0({
+    ref: "MenuRef",
+    id: "action_menu",
+    model: (__VLS_ctx.actionItems),
+    popup: (true),
+}));
+const __VLS_2 = __VLS_1({
+    ref: "MenuRef",
+    id: "action_menu",
+    model: (__VLS_ctx.actionItems),
+    popup: (true),
+}, ...__VLS_functionalComponentArgsRest(__VLS_1));
+/** @type {typeof __VLS_ctx.MenuRef} */ ;
+var __VLS_4 = {};
+var __VLS_3;
+// @ts-ignore
+var __VLS_5 = __VLS_4;
+var __VLS_dollars;
+const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
             Menu: Menu,
@@ -131,3 +109,4 @@ export default (await import('vue')).defineComponent({
         };
     },
 });
+; /* PartiallyEnd: #4569/main.vue */

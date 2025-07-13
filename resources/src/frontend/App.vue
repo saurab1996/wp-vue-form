@@ -12,7 +12,7 @@
 <script setup lang="ts">
 	// Import the defineProps function from 'vue' to define props
 	import { defineProps, ref, onMounted } from 'vue';
-	import { get } from "@/axios/index";
+	// import { get } from "@/axios/index";
 
 
 	const formData = ref({});
@@ -24,16 +24,16 @@
 			formData.value = window.wp_vue_form_data[props.formId];
 			removeLoader();
 		} else {
-			get(`/form/${props.formId}`).then((response) => {
-				if (response?.data?.form_elements) {
-					formData.value = response.data.form_elements;
-					formStyle.value = response.data.style;
-				}
-			}).catch((error) => {
-				console.error(error)
-			}).finally(() => {
-				removeLoader()
-			})
+			// get(`/forms/${props.formId}`).then((response) => {
+			// 	if (response?.data?.form_elements) {
+			// 		formData.value = response.data.form_elements;
+			// 		formStyle.value = response.data.style;
+			// 	}
+			// }).catch((error) => {
+			// 	console.error(error)
+			// }).finally(() => {
+			// 	removeLoader()
+			// })
 		}
 	});
 

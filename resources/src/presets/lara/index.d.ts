@@ -1,3 +1,4 @@
+// index.ts
 declare module "presets/lara" {
     interface Presets {
         global: any;
@@ -94,6 +95,7 @@ declare module "presets/lara" {
         inplace: any;
         progressspinner: any;
     }
+
     const Lara: Presets;
     export default Lara;
 }

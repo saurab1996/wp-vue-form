@@ -62,7 +62,8 @@ export const LocalizeText = (text: string):string => {
   if (!text) {
     return text;
   }
-  return TranslateText?.text ? TranslateText.text : text.replace(/_/g, ' ').replace(/^./, text[0].toUpperCase());
+  return text;
+  // return TranslateText?.text ? TranslateText.text : text.replace(/_/g, ' ').replace(/^./, text[0].toUpperCase());
 }
 
 export function mergeObjects(obj1: { [key: string|number]: any }, obj2: { [key: string|number]: any }): object {
@@ -78,7 +79,7 @@ export function mergeObjects(obj1: { [key: string|number]: any }, obj2: { [key: 
 
 
 
-export const confirmBox = (
+export const confirmBox = <Response>(
   useconfirm: any,
   endpoint:string,
   options:ConfirmationOptions,
@@ -98,7 +99,7 @@ export const confirmBox = (
   useconfirm.require(<ConfirmationOptions>{
     ...mergeObjects(options, defaultOptions),
     accept: () => {
-      del(endpoint,updateParams).then((response) => {
+      del(endpoint,updateParams).then((response:Response) => {
         if (response?.data?.status) {
           if (successCallback) {
             successCallback(response);
